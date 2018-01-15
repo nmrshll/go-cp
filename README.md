@@ -1,5 +1,8 @@
 # go-cp
-Copying files made easy. Golang library.
+### Golang library to make copying files easy
+
+Copying a file in vanilla Go forces you to deal with filesystem I/O, it's a bit overcomplicated for the general case, when you just want to copy a file as easy as using `cp $source $dest`.
+This tiny, one-use-case library is just for that.
 
 # Installation
 
@@ -7,8 +10,8 @@ Run `go get github.com/n-marshall/go-cp`
 
 # Usage
 
-Simply use `cp.Copy(sourceFile, destinationFile)`
-Full documentation found [here](https://godoc.org/github.com/nmrshll/go-cp)
+Simply use `cp.Copy(sourceFile, destinationFile)`  
+Full documentation found [here](https://godoc.org/github.com/nmrshll/go-cp)  
 
 ## Example
 
