@@ -12,13 +12,20 @@ Full documentation found [here](https://godoc.org/github.com/nmrshll/go-cp)
 
 ## Example
 
+[embedmd]:# (./examples/example.go)
 ```go
-import "github.com/n-marshall/go-cp"
+package main
+
+import (
+	"log"
+
+	cp "github.com/nmrshll/go-cp"
+)
 
 func main() {
-  err := cp.Copy("file.ext", "file.copy.ext")
-  if err != nil {
-    log.Fatal(err)
-  }
+	err := cp.CopyFile("examples/examplefile.ext", "examples/examplefile.copy.ext")
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 ```
