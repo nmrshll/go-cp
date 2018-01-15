@@ -1,4 +1,4 @@
-#go-cp
+# go-cp
 Copying files made easy. Golang library.
 
 # Installation
