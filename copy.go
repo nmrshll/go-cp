@@ -8,8 +8,6 @@ import (
 	"os/user"
 	"path/filepath"
 	"strings"
-
-	"github.com/davecgh/go-spew/spew"
 )
 
 func replaceHomeFolder(path string) (string, error) {
@@ -72,10 +70,9 @@ func CopyFile(src, dst string) (err error) {
 			return
 		}
 		// file doesn't exist
-		spew.Dump(filepath.Dir(dst))
 		err := os.MkdirAll(filepath.Dir(dst), 0755)
 		if err != nil {
-			spew.Dump(err)
+			return err
 		}
 
 	} else {
