@@ -6,11 +6,15 @@ This tiny, one-use-case library is just for that.
 
 # Installation
 
-Run `go get github.com/n-marshall/go-cp`
+Run `go get github.com/n-marshall/go-cp`.  
+
+### Try it
+
+In the repo folder run `make example`.  
 
 # Usage
 
-Simply use `cp.Copy(sourceFile, destinationFile)`  
+Simply use `cp.Copy(sourceFile, destinationFile)`.  
 Full documentation found [here](https://godoc.org/github.com/nmrshll/go-cp)  
 
 ## Example
