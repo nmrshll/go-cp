@@ -31,6 +31,8 @@ func replaceHomeFolder(path string) (string, error) {
 	return buffer.String(), nil
 }
 
+// AbsolutePath converts a path (relative or absolute) into an absolute one.
+// Supports '~' notation for $HOME directory of the current user.
 func AbsolutePath(path string) (string, error) {
 	homeReplaced, err := replaceHomeFolder(path)
 	if err != nil {
@@ -42,6 +44,7 @@ func AbsolutePath(path string) (string, error) {
 // CopyFile copies a file from src to dst. If src and dst files exist, and are
 // the same, then return success. Otherwise, attempt to create a hard link
 // between the two files. If that fails, copy the file contents from src to dst.
+// Creates any missing directories. Supports '~' notation for $HOME directory of the current user.
 func CopyFile(src, dst string) (err error) {
 	srcAbs, err := AbsolutePath(src)
 	if err != nil {
